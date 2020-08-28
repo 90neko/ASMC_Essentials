@@ -8,16 +8,16 @@ import com.ksptooi.asmc.message.Logger;
 public class Basic extends ExternalPlugin{
 
 	
-	public static final String version = "2.3-A";
+	public static final String version = "3.0-A";
 	
 	@Override
 	public void onEnable(){	
 		
 		Logger msg = Asmc.getLogger();
 		
-		msg.sendSysMessage("Asmc_Basic ¼ÓÔØ³É¹¦!");
-		msg.sendSysMessage("Asmc_Basic°æ±¾:"+version);
-		msg.sendSysMessage("Asmc_Basic:Ìá¹©»ù´¡µÄÃüÁî½âÎö´¦Àí;Ìí¼Ó É¾³ý ÁÐ±í ËÑË÷ ×Ô¶¯´¦Àí");
+		msg.sendSysMessage("Asmc_Basic ï¿½ï¿½ï¿½Ø³É¹ï¿½!");
+		msg.sendSysMessage("Asmc_Basicï¿½æ±¾:"+version);
+		msg.sendSysMessage("Asmc_Basic:ï¿½á¹©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½;ï¿½ï¿½ï¿½ É¾ï¿½ï¿½ ï¿½Ð±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½");
 		
 		
 		Asmc.getCorePluginManagerService().regPluginCommand(this, "cmd_add", "uk.iksp.basic.command.type.Cmd_Add");

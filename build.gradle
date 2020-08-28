@@ -28,11 +28,16 @@ dependencies {
     testImplementation 'junit:junit:4.13'
     
     
+
+    compile files('lib/ASMC_CORE.jar')
+
+    
+}
+
     processResources {
     from('src/main/java') {
         include '**/*'
     }
-}
 
 task download(type: Copy) {
     from configurations.runtime
@@ -40,20 +45,20 @@ task download(type: Copy) {
 }
 
 tasks.withType(JavaCompile) {  
-    options.encoding = "UTF-8"  
-}  
-
+    options.encoding = 'UTF-8'
+}
 
 jar {
     manifest {
         attributes(
                 "Manifest-Version": 1.0,
-                "Main-Class": "com.ksptooi.asmc.main.Asmc")
+                "Main-Class": "com.ksptooi.asmc.main.Asmc0")
     }
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     into('assets') {
         from 'assets'
     }
 }
+
     
 }
