@@ -19,9 +19,9 @@ public class Cmd_Search implements Command_cmd{
 		ArrayList<String> parameter = ic.getParameter();
 		Logger msg = Asmc.getLogger();
 		
-		//ÅĞ¶Ï²ÎÊı³¤¶È
+		
 		if(parameter.size()<1){
-			msg.sendWarningMessage("ËÑË÷Óï¾ä:>ÒªËÑË÷µÄÃû³Æ");
+			msg.sendWarningMessage("ç”¨æ³•: ?>å‚æ•°1");
 			return;
 		}
 		
@@ -29,12 +29,11 @@ public class Cmd_Search implements Command_cmd{
 		
 		CommandDataService cs = Asmc.getCommandDataService();
 		
-		//»ñÈ¡ËùÓĞÃüÁî
+		
 		ArrayList<Command> allCommand = cs.queryList(null);
 		
 		ArrayList<Command> list = new ArrayList<Command>();
 		
-		//É¸Ñ¡ÃüÁî
 		for(Command c:allCommand){
 			
 			if(c.getName().contains(cmName)){
@@ -43,14 +42,14 @@ public class Cmd_Search implements Command_cmd{
 			
 		}
 		
-		//ÅĞ¶ÏÉ¸Ñ¡ºóµÄÃüÁî
+		
 		if(list.size()<1){
-			msg.sendMessage("Ã»ÓĞ·µ»ØÈÎºÎ½á¹û!");
+			msg.sendMessage("ç”¨æ³•: ?>å‚æ•°1Ö·");
 			return;
 		}
 		
 		
-		String R2="|   ÃüÁîÃû  | ÊÇ·ñÎªÄ¿Â¼ |    ÀàĞÍ    |     ÃèÊö    |  CCA  |";
+		String R2="|   å‘½ä»¤å   | ç±»å‹ |    åœ°å€    |     æ ‡é¢˜     |  CCA  |";
 		System.out.println(R2);
 		
 		

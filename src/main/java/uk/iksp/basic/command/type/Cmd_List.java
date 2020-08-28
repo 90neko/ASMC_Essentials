@@ -20,7 +20,7 @@ public class Cmd_List implements Command_cmd{
 		ArrayList<Command> ac = ms.queryList(null);
 		Logger msg = Asmc.getLogger();
 		
-		String R2="|   ÃüÁîÃû  | ÊÇ·ñÎªÄ¿Â¼ |    ÀàĞÍ    |     ÃèÊö    |  CCA  |";
+		String R2="|   å‘½ä»¤å   | ç±»å‹ |    åœ°å€    |     æ ‡é¢˜     |  CCA  |";
 		
 		System.out.println(R2);
 		

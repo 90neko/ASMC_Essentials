@@ -21,16 +21,16 @@ public class Cmd_AutoImport implements Command_cmd {
 		ArrayList<String> parameter = ic.getParameter();
 		Logger msg = Asmc.getLogger();
 		
-		//判断参数长度
+		
 		if(parameter.size()<2){
-			msg.sendWarningMessage("自动导入:>名称,地址");
+			msg.sendWarningMessage("鐢ㄦ硶: ?>鍙傛暟1,鍙傛暟2址");
 			return;
 		}
 		
 		
-		//判断命令是否存在
+		
 		if(Asmc.getCommandDataService().isExist(parameter.get(0))){
-			msg.sendWarningMessage("添加失败! 命令重复.");
+			msg.sendWarningMessage("鐢ㄦ硶: ?>鍙傛暟1,鍙傛暟2址");
 			return;
 		}
 		
@@ -42,13 +42,13 @@ public class Cmd_AutoImport implements Command_cmd {
 			
 			entity.setName(parameter.get(0));
 			entity.setType("cmd_link");
-			entity.setTitle("自动导入的命令");
+			entity.setTitle("Auto Import");
 			entity.setCca(Asmc.getUserPermissionService().getActiveUser().getUserName());
 			entity.setFile(file.getName());
 			entity.setPath(file.getParent().replace("\\", "/").replace("\\\\", "/")+"/");	
 			
 		}catch(Exception e){
-			msg.sendWarningMessage("添加失败! 路径解析错误!");
+			msg.sendWarningMessage("瀵煎叆澶辫触!");
 			return;
 		}
 		
@@ -56,7 +56,7 @@ public class Cmd_AutoImport implements Command_cmd {
 
 		Asmc.getCommandDataService().insert(entity);
 		
-		msg.sendWarningMessage("自动导入成功! 命令:" + parameter.get(0));
+		msg.sendWarningMessage("鑷姩瀵煎叆鎴愬姛!" + parameter.get(0));
 		
 	}
 

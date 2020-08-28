@@ -21,16 +21,16 @@ public class Cmd_Add implements Command_cmd{
 		
 		ArrayList<String> parameter = ic.getParameter();
 		
-		//ÅĞ¶Ï²ÎÊı³¤¶È
+		
 		if(parameter.size()<3){
-			msg.sendWarningMessage("Ìí¼ÓÓï¾ä:>Ãû³Æ,µØÖ·,ÀàĞÍ,ÃèÊö");
+			msg.sendWarningMessage("ç”¨æ³• ?>å‚æ•°1,å‚æ•°2,å‚æ•°3");
 			return;
 		}
 		
 		
-		//ÅĞ¶ÏÃüÁîÊÇ·ñ´æÔÚ
+		
 		if(Asmc.getCommandDataService().isExist(parameter.get(0))){
-			msg.sendWarningMessage("Ìí¼ÓÊ§°Ü! ÃüÁîÖØ¸´.");
+			msg.sendWarningMessage("ç”¨æ³• ?>å‚æ•°1,å‚æ•°2,å‚æ•°3");
 			return;
 		}
 		
@@ -68,7 +68,8 @@ public class Cmd_Add implements Command_cmd{
 		
 		
 		if(Asmc.getCommandTypeScannerService().getType(parameter.get(2)) == null){
-			msg.sendWarningMessage("ÃüÁîÌí¼ÓÊ§°Ü! "+parameter.get(2)+" ²»ÊÇÒ»¸öÕıÈ·µÄÃüÁîÀàĞÍ");
+			msg.sendWarningMessage("å‘½ä»¤:"+parameter.get(2)+"ç±»å‹æœªæ‰¾åˆ°!");
+			
 			return;
 		}
 		
@@ -81,7 +82,7 @@ public class Cmd_Add implements Command_cmd{
 		Asmc.getCommandDataService().insert(commandEntity);
 		
 		
-		msg.successMessage("ÃüÁî:"+commandEntity.getName()+"ÒÑ³É¹¦Ìí¼Ó!");
+		msg.successMessage("æ·»åŠ æˆåŠŸ:"+commandEntity.getName());
 		
 	}
 	
